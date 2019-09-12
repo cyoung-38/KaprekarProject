@@ -1,4 +1,5 @@
 #include<math.h>
+#include<inttypes.h>
 #include "kaprekarUtils.h"
 
 #define false 0
@@ -31,7 +32,7 @@ int isKaprekar(int n) {
 
   int i;
   //compute the square
-  long square = n * (long) n;
+  int64_t square = pow(n, 2);
   //compute the number of digits of the square
   int numDigits = round(log10(n)) + 1;
   long modulus = 1;
